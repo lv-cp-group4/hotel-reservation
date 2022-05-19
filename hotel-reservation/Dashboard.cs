@@ -45,5 +45,9 @@ namespace hotel_reservation
             loadform(new AddStudentForm());
         }
 
+        private void bookingsBtn_Click(object sender, EventArgs e)
+        {
+            loadform(new BookingsList());
+        }
     }
 }

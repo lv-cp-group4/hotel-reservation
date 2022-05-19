@@ -96,5 +96,24 @@ namespace hotel_reservation
             con.Close();
         }
 
+        public static void BookStudent(Reservation res, string id)
+        {
+            string sql = "UPDATE fake_table SET student_id = @StudentID, availability = @Availability WHERE ID = @StudentID";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@StudentID", MySqlDbType.VarChar).Value = id;
+            cmd.Parameters.Add("@Availability", MySqlDbType.VarChar).Value = "Unavailable";
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student booked successfuly.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Student not booked. \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
     }
 }

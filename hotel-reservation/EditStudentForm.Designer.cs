@@ -112,7 +112,7 @@
             // 
             this.txtCourse.FormattingEnabled = true;
             this.txtCourse.Items.AddRange(new object[] {
-            "BISIS",
+            "BSIS",
             "ACT",
             "BSAT",
             "BSAIS",

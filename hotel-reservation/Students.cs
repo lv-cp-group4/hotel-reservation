@@ -14,14 +14,14 @@ namespace hotel_reservation
     public partial class Students : Form
     {
         EditStudentForm form;
-        Bookings form2;
+        Reservations form2;
        
 
         public Students()
         {
             InitializeComponent();
             form = new EditStudentForm(this);
-            form2 = new Bookings(this);
+            form2 = new Reservations(this);
         }
 
         public void Display()
@@ -60,7 +60,8 @@ namespace hotel_reservation
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            DbStudent.DisplayAndSearch("SELECT id, firstname, lastname, course, year_level, student_id, address, zip_code, city, email FROM students WHERE firstname LIKE '%" + txtSearch.Text + "%'", dataGridStudents);
+            DbStudent.DisplayAndSearch("SELECT id, firstname, lastname, course, year_level, student_id, address, zip_code, city, email FROM students WHERE firstname LIKE '%" + txtSearch.Text + "%' OR lastname LIKE '%" + txtSearch.Text + "%'", dataGridStudents);
         }
+
     }
 }

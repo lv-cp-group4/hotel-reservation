@@ -35,6 +35,7 @@
             this.students = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.bookingsBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.bookingsBtn);
             this.panel1.Controls.Add(this.addStudent);
             this.panel1.Controls.Add(this.students);
             this.panel1.Controls.Add(this.button1);
@@ -80,7 +82,7 @@
             this.addStudent.FlatAppearance.BorderSize = 0;
             this.addStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addStudent.Font = new System.Drawing.Font("Raleway SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addStudent.Location = new System.Drawing.Point(32, 383);
+            this.addStudent.Location = new System.Drawing.Point(32, 347);
             this.addStudent.Name = "addStudent";
             this.addStudent.Size = new System.Drawing.Size(210, 41);
             this.addStudent.TabIndex = 0;
@@ -94,7 +96,7 @@
             this.students.FlatAppearance.BorderSize = 0;
             this.students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.students.Font = new System.Drawing.Font("Raleway SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.students.Location = new System.Drawing.Point(32, 322);
+            this.students.Location = new System.Drawing.Point(32, 286);
             this.students.Name = "students";
             this.students.Size = new System.Drawing.Size(210, 41);
             this.students.TabIndex = 0;
@@ -108,7 +110,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Raleway SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 263);
+            this.button1.Location = new System.Drawing.Point(32, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(210, 41);
             this.button1.TabIndex = 0;
@@ -123,6 +125,20 @@
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(976, 555);
             this.mainpanel.TabIndex = 1;
+            // 
+            // bookingsBtn
+            // 
+            this.bookingsBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.bookingsBtn.FlatAppearance.BorderSize = 0;
+            this.bookingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bookingsBtn.Font = new System.Drawing.Font("Raleway SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingsBtn.Location = new System.Drawing.Point(32, 406);
+            this.bookingsBtn.Name = "bookingsBtn";
+            this.bookingsBtn.Size = new System.Drawing.Size(210, 41);
+            this.bookingsBtn.TabIndex = 0;
+            this.bookingsBtn.Text = "Bookings";
+            this.bookingsBtn.UseVisualStyleBackColor = false;
+            this.bookingsBtn.Click += new System.EventHandler(this.bookingsBtn_Click);
             // 
             // Dashboard
             // 
@@ -151,6 +167,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.Button addStudent;
+        private System.Windows.Forms.Button bookingsBtn;
     }
 }
 
